@@ -3,6 +3,7 @@ spring:
     # MongoDB, JDBC 등도 가능
     # 세션 특성상(단순(key:value)하고, 휘발성) RDB는 불필요하고, 특히 I/O 측면에서 비효율적임
     store-type: redis
+# default value
 #  redis:
 #    host: localhost
 #    port: 6379
