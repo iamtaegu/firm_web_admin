@@ -1,6 +1,8 @@
+import "./Body.css"
+
 const Body = () => {
     return (
-        <div>
+        <div className="body">
             <h1>Body</h1>
         </div>
     );
