@@ -34,20 +34,31 @@ Body.defaultProps = {
     );
 }*/
 
+function Viewer({number}) {
+    console.log(number);
+    return <div>{number % 2 === 0 ? <h3>짝수</h3> : <h3>홀수</h3>}</div>;
+}
+
 function Body() {
 
     console.log("컴포넌트 업데이트 ! ");
 
-    const [count, setCount] = useState(0);
-
+    const [number, setNumber] = useState(0);
     const onIncerease = () => {
-        setCount(count+1);
-    }
+        setNumber(number+1);
+    };
+    const onDecrease = () => {
+        setNumber(number-1);
+    };
 
     return (
         <div>
-            <h2>{count}</h2>
-            <button onClick={onIncerease}> + </button>
+            <h2>{number}</h2>
+            <Viewer number={number}/>
+            <div>
+                <button onClick={onDecrease}> - </button>
+                <button onClick={onIncerease}> + </button>
+            </div>
         </div>
     )
 }
